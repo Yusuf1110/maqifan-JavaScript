@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <title>改变背景颜色</title>
+        <script>
+            function backGroundColor(str)
+            {
+                document.body.style.backgroundColor=str;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="设为红色" onclick="backGroundColor('red')">
+        <input type="button" value="设为绿色" onclick="backGroundColor('green')">
+        <input type="button" value="设为蓝色" onclick="backGroundColor('blue')">
+        <input type="button" value="自定义" onclick="backGroundColor('#00ff00')">
+    </body>
+</html>
