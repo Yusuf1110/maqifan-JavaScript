@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>打印金字塔</title>
+    <head>
+        <script>
+            var level=prompt("请输入要打印的层数");
+            level=parseFloat(level)&&Number(level)//number不考虑其他进制，parseFloat可以起到去除其他字符转换；
+            while(isNaN(level))
+            {
+                alert("请输入有效数字！");
+                var level=prompt("请输入要打印的层数（纯数字）");
+                level=parseFloat(level)&&Number(level);
+            }
+            for(var i=1;i<=level;i++)
+            {
+                for(var blank1=0;blank1<(level-i);blank1++)
+                {
+                    document.write('&nbsp;');
+                }
+                for(var star=0;star<(2*i-1);star++)
+                {
+                    document.write('*');
+                }
+                document.write('<br>');//换行
+            }
+        </script>
+    </head>
+    </head>
+</html>
