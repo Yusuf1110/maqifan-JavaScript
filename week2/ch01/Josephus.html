@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function jadgeIsNaN(str) {
+            var pattern = /^\d+$/g;//正则表达式  ^:开始  \d:数字  +:持续上一格式  $：最后
+            var result = str.match(pattern);//匹配字符串！
+            if (result == null) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        var num = NaN;
+        do {
+            num = prompt('请输入人数');
+            if (jadgeIsNaN(num)) {
+                alert("请输入纯数字！");
+            }
+        } while (jadgeIsNaN(num))
+
+        var a = [], i = 0;
+        for (var j = 0; j < num; j++) {
+            a.push(j + 1);//push就是入栈
+        }
+        while (a.length > 1) {
+            ++i;
+            head = a.shift()//队列移出,在这里表示把第一个人取出来；
+            if (i % 3 != 0) {
+                a.push(head);//这里是不符合条件的人压入栈中
+            }
+        }
+        alert('最后的生存者是' + a[0] + '号');
+    </script>
+</body>
+</html>
