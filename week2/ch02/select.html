@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>三级下拉菜单</title>
+    </head>
+    <body>
+        <!-- 这里选择-1是为了 -->
+        <select id="campus">
+            <option value="-1">请选择</option>
+        </select>
+        <select id="region"></select>
+        <select id="building"></select>
+        <script>
+            var campusArr=['渭水校区','雁塔校区'];
+            var regionArr=[
+                ['东区','西区'],
+                ['北区','南区'],
+                ];
+            var buildingArr=[
+                [
+                    ['树惠园','天行健'],['滋兰苑','小时空']
+                ],[
+                    ['一食堂','二食堂'],['三食堂','四食堂']
+                ]
+                ];
+            function createOption(obj,data){
+                for (var i in data){
+                    var op = new Option(data[i],i);//创建下拉菜单的option
+                    obj.options.add(op); // 将选项添加到下拉菜单中
+                }
+            }
+            var campus=document.getElementById('campus'); //获取校区元素对象
+            createOption(campus,campusArr);
+
+            var region=document.getElementById('region');
+            /* .onchange 当值发生改变时触发 */
+            campus.onchange=function(){
+                region.options.length=0;
+                createOption(region,regionArr[campus.value]);//！！！确定了campus，用其下标将regionArr的范围确定！！！
+                /* 下面的代码：修改campus会关联到builing */
+                if(campus.value>=0){
+                    region.onchange()//匿名函数的调用？
+                }else{
+                    building.options.length=0;
+                }
+            }
+
+            var building=document.getElementById('building');
+            region.onchange=function(){
+                building.options.length=0;
+                createOption(building,buildingArr[campus.value][region.value]);
+            } 
+        </script>
+    </body>
+</html>
