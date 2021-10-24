@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>生成表单</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="calc.js"></script>
+    <h1 id="head">运算器@MUCHFUN</h1>
+    <hr />
+    <div class="box1"> 
+        整数1：<input type="text"  id="num1">
+        整数2：<input type="text"  id="num2">
+        <br />
+        <br />
+        <button id="add" onclick="calc(add)">相加</button>
+        <button id="sub" onclick="calc(sub)">相减</button>
+        <button id="mul" onclick="calc(mul)">相乘</button>
+        <button id="div" onclick="calc(div)">相除</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        结果：<input type="text" id="result" readonly >
+    </div>
+
+</body>
+
+</html>
