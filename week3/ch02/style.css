@@ -1,0 +1,40 @@
+.box{
+    height: 52px;
+    width: 260px;
+    border: 2px solid black ;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.box div{
+    height: 50px;
+    width: 50px;
+    border:2px solid black;
+    float: left;
+    margin-left: 6px;
+    border-radius: 100%;
+}
+
+#count{
+    width: 60px;
+    color: red;
+    font-size: 280%;/* 字体大小 */
+    margin-left: 15px;
+    border: white;
+    line-height: 50px;/* 行间距 */
+    
+}
+.red{
+    background-color: rgb(255, 44, 44);
+}
+.green{
+    background-color: rgb(90, 255, 68);
+}
+.yellow{
+    background-color: rgb(255, 204, 64);
+}
+.white{
+    background-color: white;
+}
