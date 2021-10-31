@@ -1,0 +1,17 @@
+body{  
+    background-image: url('project.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;/* 背景不随前景动 */
+    background-size: 1000px 562px;
+    background-position: center;
+}
+.timer{
+    background-color: rgb(255, 255, 255);
+    opacity: 50%;
+    color: rgb(0, 0, 0);
+    float:left;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 33.2%;
+}
