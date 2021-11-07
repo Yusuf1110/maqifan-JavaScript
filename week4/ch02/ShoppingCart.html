@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> 购物车</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cart">
+        <div id="cart-title">我的购物车<span id="myName">@MUCHFUN</span></div>
+        <table class="cart-table">
+            <tr>
+                <th width='60'><span class="cart-all">全选</span></th>
+                <th>商品</th>
+                <th width='120'>单价</th>
+                <th width='100'>数量</th>
+                <th width='120'>小计</th>
+                <th width='80'>操作</th>
+            </tr>
+            <tr class="cart-item">
+                <td><input type="checkbox" class="cart-check" checked></td>
+                <td class="cart-txt-left"><span class="cart-name">Loading...</span></td>
+                <td><span class="cart-price">0</span></td>
+                <td>
+                    <span class="cart-reduce">-</span>
+                    <span class="cart-num" >0</span>
+                    <span class="cart-add">+</span>
+                </td>
+                <td><span class="cart-subtotal">0</span></td>
+                <td><span class="cart-del">删除</span></td>
+            </tr>
+            <tr class="cart-bottom">
+                <!-- colspan设置单元格可横跨的列数/合并单元格 -->
+                <td colspan="6">
+                    <span>已选择</span>
+                    <span class="cart-total-num">0</span>
+                    <span>总计:</span>
+                    <span class="cart-total-price">0</span>
+                    <span class="cart-bottom-btn">提交订单</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="Cart.js"></script>
+    <script src="item.js"></script>
+</body>
+
+</html>

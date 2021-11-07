@@ -1,0 +1,126 @@
+.cart{
+    width: 700px;
+    border: solid 1px black;
+    margin: 0  auto;
+    padding: 0 10px 10px;
+    background-color: #fffaee;
+}
+#cart-title{
+    margin: 10px;
+    border-bottom: 2px solid rgb(240, 140, 26);
+    font-size: 25px;
+    text-align: center;
+    line-height: 30px;
+    height: 35px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#myName{
+    color: rgb(131, 131, 131);
+    text-shadow:2px 2px rgb(206, 206, 206);
+}
+.cart-table{
+    width: 100%;
+    margin: 0 auto;
+    /* 边框合并 */
+    border-collapse: collapse;
+    font-size: 15px;
+    color:rgb(80, 80, 80);
+}
+.cart-table th{
+    border-bottom:2px solid rgba(206, 206, 206, 0.774);
+    font-weight: normal;
+    height: 35px;
+    line-height: 23px;
+}
+.cart-item{
+    border-bottom:1px dotted rgb(255, 223, 193);
+}
+.cart-item td{
+    height: 50px;
+    /* 每个表格里字体居中对齐 */
+    text-align: center;
+}
+.cart-name{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.cart-item .cart-txt-left{
+    text-align: left;
+}
+.cart-subtotal{
+    color:red;
+    font-weight: bold;
+}
+.cart-reduce,
+.cart-add{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height:16px ;
+    color:rgb(0, 0, 0);
+    background-color: #d2dff3;
+    border:0;
+    /* cursor光标 */
+    cursor: pointer;
+    border-radius: 2px;
+    font-size:15px;
+}
+/* 光标触碰改变 */
+.cart-reduce:hover,
+.cart-add:hover{
+    background-color:rgb(255, 156, 43) ;
+}
+.cart-num{
+    margin:5px;
+    width: 35px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    padding:0,30;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+}
+.cart-del,
+.cart-all{
+    color:rgb(255, 70, 70);
+    background-color: #ffefd1;
+    font-size: 13px;
+    border:1px rgb(161, 161, 161) solid;
+    padding: 0 2px;
+    border-radius: 4px;
+}
+.cart-del:hover,
+.cart-all:hover{
+    cursor: pointer;
+    background-color: #ffb489;
+}
+.cart-bottom{
+    height: 55px;
+    text-align: right;
+}
+.cart-bottom cart-all{
+    position:relative;
+    top:1px;
+}
+.cart-total-price{
+    color: rgb(255, 50, 50);
+    font-weight: bold;
+    font-size: 16px;
+}
+.cart-bottom-btn{
+    color: rgb(255, 95, 95);
+    font-size:14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin:0 20px;
+    background-color: #ffdecb;
+    border: 2px solid rgba(255, 167, 53, 0.856) ;
+    padding: 3px 6px;
+    border-radius: 8px;
+}
+.cart-bottom-btn:hover{
+    background-color: #ff961d;
+    color: #ffffff;
+}
