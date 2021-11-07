@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <title>改变盒子大小</title>
+        <style>
+            .box{
+                width: 50px;
+                height: 50px;
+                border: 10px red solid;
+                background-color: chartreuse;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" id="box">小</div>
+        <script>
+            var box=document.getElementById('box');
+            var i=0;
+            box.onclick=function (){
+                ++i;
+                /* i是偶数则放大，奇数则缩小 */
+                if(i%2){
+                    this.style.width='200px';
+                    this.style.height='200px';
+                    this.innerHTML='大';
+                }else{
+                    this.style.width='50px';
+                    this.style.height='50px';
+                    this.innerHTML='小';
+                }
+            }
+        </script>
+    </body>
+</html>
